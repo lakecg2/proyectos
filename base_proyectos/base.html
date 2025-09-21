@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_base.css">
+    <title>Proyectos Urgentes</title>
+</head>
+<body>
+    <div class="Navbar">
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="window.location.href='public/proyectos.html'">Todos los Proyectos</button>
+            <button class="nav-btn active" onclick="window.location.href='base.html'">Proyectos Urgentes</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1 class="principal-title">Proyectos urgentes</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del Proyecto</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Entrega</th>
+                    <th>Estado</th>
+                    <th>Prioridad</th>
+                    <th>Días Restantes</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-urgentes">
+
+            </tbody>
+        </table>
+        
+        <div id="mensaje-vacio" style="display: none; text-align: center; color: #888; margin-top: 2em;">
+            <p>No hay proyectos urgentes en este momento.</p>
+        </div>
+    </div>
+</body>
+<script src="base_function.js"></script>
+</html>

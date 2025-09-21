@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Empecemos a Planearlo</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">EMPECEMOS A PLANEARLO</h1>
+        
+        <div class="description-box">
+            <p class="description-text">
+                Describe tu proyecto, tus objetivos y los resultados que esperas.<br>
+                Esta información nos permitirá crear propuestas más concretas y a tu medida.
+            </p>
+        </div>
+
+        <form id="projectForm">
+            <!-- Información de Contacto y del Proyecto -->
+            <div class="form-section">
+                <h2 class="section-title">Información de Contacto y del Proyecto</h2>
+                
+                <div class="form-group">
+                    <label for="nombreCompleto">Nombre completo: *</label>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico: *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono de contacto: *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre de tu proyecto o empresa: *</label>
+                    <input type="text" id="nombreProyecto" name="nombreProyecto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="actividad">¿Cuál es la actividad principal de tu empresa o negocio? *</label>
+                    <textarea id="actividad" name="actividad" required></textarea>
+                </div>
+            </div>
+
+            <!-- Descripción General del Proyecto -->
+            <div class="form-section">
+                <h2 class="section-title">Descripción General del Proyecto</h2>
+                
+                <div class="form-group">
+                    <label for="descripcionProyecto">Cuéntanos, ¿en qué consiste tu proyecto? *</label>
+                    <textarea id="descripcionProyecto" name="descripcionProyecto" placeholder="Describe tu idea, el problema que buscas resolver, etc." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="objetivoPrincipal">¿Cuál es el objetivo principal de este proyecto? *</label>
+                    <textarea id="objetivoPrincipal" name="objetivoPrincipal" placeholder="Ejemplo: Aumentar ventas, mejorar la gestión interna, llegar a nuevos clientes" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="expectativas">¿Qué esperas lograr con este proyecto? *</label>
+                    <textarea id="expectativas" name="expectativas" required></textarea>
+                </div>
+            </div>
+
+            <!-- Tipo de Servicio y Detalles Técnicos -->
+            <div class="form-section">
+                <h2 class="section-title">Tipo de Servicio y Detalles Técnicos</h2>
+                
+                <div class="form-group">
+                    <label>¿Qué tipo de proyecto necesitas desarrollar? * (Selecciona una o más opciones)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="desarrolloWeb" name="tipoProyecto" value="Desarrollo Web">
+                            <label for="desarrolloWeb">Desarrollo Web</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="appMovil" name="tipoProyecto" value="Aplicación Móvil">
+                            <label for="appMovil">Aplicación Móvil</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="softwareEscritorio" name="tipoProyecto" value="Software de Escritorio">
+                            <label for="softwareEscritorio">Software de Escritorio</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="videojuego" name="tipoProyecto" value="Videojuego">
+                            <label for="videojuego">Videojuego</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="mantenimiento" name="tipoProyecto" value="Mantenimiento y Soporte Técnico">
+                            <label for="mantenimiento">Mantenimiento y Soporte Técnico</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="presupuesto">¿Cuál es el presupuesto estimado que tienes para este proyecto? *</label>
+                    <select id="presupuesto" name="presupuesto" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="menos5000">Menos de $5,000</option>
+                        <option value="5000-15000">Entre $5,000 y $15,000</option>
+                        <option value="15000-30000">Entre $15,000 y $30,000</option>
+                        <option value="mas30000">Más de $30,000</option>
+                        <option value="porDefinir">Por definir</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tiempo">¿Para cuándo te gustaría tener listo el proyecto? *</label>
+                    <select id="tiempo" name="tiempo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="urgente">Lo antes posible</option>
+                        <option value="1-3meses">1-3 meses</option>
+                        <option value="4-6meses">4-6 meses</option>
+                        <option value="sinFecha">No tengo una fecha definida</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" class="whatsapp-btn" onclick="enviarWhatsApp()">
+                <i class="fab fa-whatsapp whatsapp-icon"></i>
+                <span>Contáctanos</span>
+            </button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

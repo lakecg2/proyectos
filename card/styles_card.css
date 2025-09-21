@@ -1,0 +1,116 @@
+        * {
+            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            min-height: 200vh; /* Para poder hacer scroll */
+            background: #f0f0f0;
+        }
+
+        .card {
+            width: 21em;
+            height: 11em;
+            background: linear-gradient(to right, #000000, #1d1d1d);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #e74c3c;
+            
+            /* Posición fija que sigue el scroll */
+            position: fixed;
+            top: 50%;
+            right: 2em;
+            transform: translateY(-50%) translateX(150%);
+            z-index: 1000; /* Aparece encima de otros elementos */
+            
+            /* Animación */
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Clase que se agrega cuando es visible */
+        .card.visible {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .card-title {
+            text-align: center;
+            color: #0353a4;
+            font-size: 16px;
+            padding-top: 2em;
+        }
+
+        .card-subtitle {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 1.5em;
+            font-size: 16px;
+        }
+
+        .card-button {
+            display: block;
+            margin: 1em auto;
+            padding: 0.7em 0.8rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 99rem;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #c0392b;
+        }
+
+        .card-button span {
+            display: inline-block;
+            transition: opacity 0.3s ease;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        @font-face {
+            font-family: 'Space Grotesk';
+            src: url(../fonts/SpaceGrotesk-VariableFont_wght.ttf)
+}
+
+.proyectos-button {
+    position: fixed;
+    top: 2em;
+    left: 2em;
+    padding: 0.7em 1.5em;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 99rem;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+    z-index: 1000;
+}
+
+.proyectos-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+}
+
+.proyectos-button span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.proyectos-button:hover span {
+    transform: scale(1.05);
+}

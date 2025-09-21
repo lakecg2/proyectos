@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles_proyectos.css">
+    <title>Proyectos</title>
+</head>
+<body>
+    <div class="Navbar">
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="window.location.href='proyectos.html'">Todos los Proyectos</button>
+            <button class="nav-btn" onclick="window.location.href='../base.html'">Proyectos Urgentes</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1 class="principal-title">Proyectos</h1>
+        <div class="options">
+            <label for="search-bar">Buscar Proyecto:</label>
+            <input id="search-bar" type="text" placeholder="Buscar proyecto..." onkeyup="buscarProyecto()">
+            <button id="add-button" onclick="mostrarModalAgregar()">Agregar Proyecto</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del Proyecto</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Entrega</th>
+                    <th>Estado</th>
+                    <th>Prioridad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-proyectos">
+                <tr>
+                    <td>Desarrollo de Sitio Web</td>
+                    <td>2024-06-01</td>
+                    <td>2024-06-30</td>
+                    <td>En Progreso</td>
+                    <td>Alta</td>
+                    <td>
+                        <button class="btn-editar" onclick="editarProyecto(this)">Editar</button>
+                        <button class="btn-eliminar" onclick="eliminarProyecto(this)">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aplicación Móvil</td>
+                    <td>2024-05-15</td>
+                    <td>2024-07-15</td>
+                    <td>Pendiente</td>
+                    <td>Media</td>
+                    <td>
+                        <button class="btn-editar" onclick="editarProyecto(this)">Editar</button>
+                        <button class="btn-eliminar" onclick="eliminarProyecto(this)">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tienda en Línea</td>
+                    <td>2024-04-20</td>
+                    <td>2024-06-20</td>
+                    <td>Completado</td>
+                    <td>Baja</td>
+                    <td>
+                        <button class="btn-editar" onclick="editarProyecto(this)">Editar</button>
+                        <button class="btn-eliminar" onclick="eliminarProyecto(this)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para agregar/editar proyecto -->
+    <div id="modalProyecto" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2 id="tituloModal">Agregar Proyecto</h2>
+            <form id="formProyecto">
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre del Proyecto:</label>
+                    <input type="text" id="nombreProyecto" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaInicio">Fecha de Inicio:</label>
+                    <input type="date" id="fechaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaEntrega">Fecha de Entrega:</label>
+                    <input type="date" id="fechaEntrega" required>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" required>
+                        <option value="">Seleccionar estado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En Progreso">En Progreso</option>
+                        <option value="Completado">Completado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="prioridad">Prioridad:</label>
+                    <select id="prioridad" required>
+                        <option value="">Seleccionar prioridad</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Guardar</button>
+                    <button type="button" onclick="cerrarModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="org_proyectos.js"></script>
+</html>
